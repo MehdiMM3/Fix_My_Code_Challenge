@@ -1,25 +1,31 @@
 #!/usr/bin/python3
-""" challenge """
+""" FizzBuzz
+    Change of logic if (i % 3) == 0 and (i % 5) == 0:
+"""
 import sys
 
 
 def fizzbuzz(n):
     """
-    FizzBuzz prints numbs from 1 to n separated by a space.
+    FizzBuzz function prints numbers from 1 to n separated by a space.
+    
+    - For multiples of three print "Fizz" instead of the number and for
+      multiples of five print "Buzz".
+    - For numbers which are multiples of both three and five print "FizzBuzz".
     """
     if n < 1:
         return
 
     tmp_result = []
-    for x in range(1, n + 1):
-        if (x % 3) == 0 and (x % 5) == 0:
+    for i in range(1, n + 1):
+        if (i % 3) == 0 and (i % 5) == 0:
             tmp_result.append("FizzBuzz")
-        elif (x % 3) == 0:
+        elif (i % 3) == 0:
             tmp_result.append("Fizz")
-        elif (x % 5) == 0:
+        elif (i % 5) == 0:
             tmp_result.append("Buzz")
         else:
-            tmp_result.append(str(x))
+            tmp_result.append(str(i))
     print(" ".join(tmp_result))
 
 
